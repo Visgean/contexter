@@ -8,4 +8,10 @@ dependencies = [
     "google-auth-httplib2>=0.2.0",
     "google-auth-oauthlib>=1.2.2",
     "mcp[cli]>=1.7.0",
+    "numpy>=2.2.5",
+    "openmeteo-requests>=1.4.0",
+    "pandas>=2.2.3",
+    "requests-cache>=1.2.1",
+    "retry-requests>=2.0.0",
+    "ruff>=0.11.8",
 ]

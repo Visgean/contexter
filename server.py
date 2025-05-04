@@ -1,11 +1,9 @@
 from mcp.server.fastmcp import FastMCP
 import calendar_utils
+import weather
 
 # Create an MCP server
 mcp = FastMCP("CalendarServer")
-
-# @mcp.resource("users://{user_id}/profile")
-# def get_user_profile(user_id: str) -> str:
 
 
 @mcp.tool()
@@ -28,9 +26,12 @@ def add_event(
 
 
 @mcp.tool()
-def add_event(summary:str, description:str, start_date:str, end_date:str, timezone:str) -> str:
+def get_weather_forecast(lat, lng) -> str:
     """Add event to calendar, returns html link"""
+    return weather.get_weather_forecast(lat, lng)
 
-    return calendar_utils.add_event(summary, description, start_date, end_date, timezone)
 
-
+@mcp.tool()
+def get_weather_forecast_prague() -> str:
+    """Get weather forecast for Prague, Czech Republic"""
+    return weather.get_weather_forecast()
