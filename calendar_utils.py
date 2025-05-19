@@ -42,7 +42,7 @@ class Calendar:
         start_date = datetime.datetime(
             year=year, month=month - 1, day=1, tzinfo=timezone.utc
         )
-        end_date = start_date + datetime.timedelta(days=100)  # Roughly one month later
+        end_date = start_date + datetime.timedelta(days=100)  # Roughly 3 month later
 
         events_result = (
             self.service.events()
